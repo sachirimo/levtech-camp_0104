@@ -49,5 +49,10 @@ use App\Http\Requests\PostRequest; // useする
 
     return redirect('/posts/' . $post->id);
 }
+    public function delete(Post $post)
+{
+    $post->delete();
+    return redirect('/');
+}
  }
 ?>
